@@ -6,7 +6,7 @@
 /*   By: fbesson <fbesson@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 17:26:46 by fbesson           #+#    #+#             */
-/*   Updated: 2022/11/30 18:13:04 by fbesson          ###   ########.fr       */
+/*   Updated: 2022/11/30 20:43:16 by fbesson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void	*ft_calloc(size_t nelements, size_t bytes);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_bzero(void *s, size_t n);
 void	ft_putstr_fd(char *str, int fd);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dest, const char *src, size_t n);
