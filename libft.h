@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fbesson <fbesson@student.42.fr>            +#+  +:+       +#+        */
+/*   By: fbesson <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/30 17:26:46 by fbesson           #+#    #+#             */
-/*   Updated: 2022/11/30 20:43:16 by fbesson          ###   ########.fr       */
+/*   Created: 2022/12/01 10:37:13 by fbesson           #+#    #+#             */
+/*   Updated: 2022/12/01 13:10:05 by fbesson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H 
+#ifndef LIBFT_H
 # define LIBFT_H
 
 # include <ctype.h>
@@ -18,9 +18,8 @@
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdio.h>
-# include <string.h> 
-
-//int fonction
+# include <string.h>
+# include <stdint.h>
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -32,9 +31,6 @@ int		ft_memcmp(const void *memoire1, const void *memoire2, size_t n);
 int		ft_atoi(const char *str);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-
-//others
-
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *src);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
@@ -52,9 +48,6 @@ void	ft_putstr_fd(char *str, int fd);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dest, const char *src, size_t n);
 size_t	ft_strlcpy(char *dest, const char *src, size_t n);
-
-//Fonction de la partie 2.
-
 char	*ft_substr(const char *str, unsigned int start, size_t n);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);

@@ -6,7 +6,7 @@
 /*   By: fbesson@student.42.fr <marvin@42.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 20:06:19 by fbesson@stude     #+#    #+#             */
-/*   Updated: 2022/11/22 22:34:35 by fbesson          ###   ########.fr       */
+/*   Updated: 2022/12/01 13:08:07 by fbesson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_calloc(size_t nelements, size_t bytes)
 	void	*mem;
 	size_t	n;
 
+	if (bytes && nelements > SIZE_MAX / bytes)
+		return (NULL);
 	n = bytes * nelements;
 	mem = malloc(n);
 	if (!mem)

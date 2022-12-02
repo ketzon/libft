@@ -6,13 +6,13 @@
 /*   By: fbesson@student.42.fr <marvin@42.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 19:54:16 by fbesson@stude     #+#    #+#             */
-/*   Updated: 2022/11/30 18:12:41 by fbesson          ###   ########.fr       */
+/*   Updated: 2022/12/01 16:49:19 by fbesson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	digit_count(int n)
+static int	digit_count(long n)
 {
 	int	len;
 
@@ -32,20 +32,6 @@ static int	digit_count(int n)
 	return (len);
 }
 
-static char	*void_tab(int n)
-{
-	int		size;
-	char	*tab;
-
-	size = 0;
-	if (n == 0)
-		size = 2;
-	tab = (char *)malloc(sizeof(char) * size);
-	tab[0] = '0';
-	tab[1] = '\0';
-	return (tab);
-}
-
 char	*ft_itoa(int n)
 {
 	long	nb;
@@ -58,13 +44,13 @@ char	*ft_itoa(int n)
 	if (!tab)
 		return (NULL);
 	if (nb == 0)
-		return (void_tab(n));
+		tab[0] = '0';
 	if (nb < 0)
 		nb = -nb;
 	if (n < 0)
 		tab[0] = '-';
 	tab[len] = '\0';
-	len--;
+		len--;
 	while (nb != 0)
 	{
 		tab[len--] = nb % 10 + '0';

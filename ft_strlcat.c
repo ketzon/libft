@@ -6,7 +6,7 @@
 /*   By: fbesson@student.42.fr <marvin@42.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/16 20:09:33 by fbesson@stude     #+#    #+#             */
-/*   Updated: 2022/11/17 17:54:10 by fbesson@stude    ###   ########.fr       */
+/*   Updated: 2022/12/01 13:28:43 by fbesson          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t n)
 	i = 0;
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
+	if (n == 0)
+		return (src_len);
 	if (dest_len < n - 1 && n > 0)
 	{
 		while (src[i] && dest_len + i < n - 1)
