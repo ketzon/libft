@@ -6,7 +6,7 @@
 #    By: fbesson@student.42.fr <marvin@42.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/16 20:10:49 by fbesson@stude     #+#    #+#              #
-#    Updated: 2022/12/06 18:50:23 by fbesson          ###   ########.fr        #
+#    Updated: 2022/12/17 18:29:36 by fbesson          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,10 @@ OBJS_BONUS = $(BONUS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(OBJS_BONUS)
+$(NAME): $(OBJS)
+	ar -rcs $(NAME) $(OBJS)
+
+bonus: $(OBJS) $(OBJS_BONUS)
 	ar -rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 clean:
@@ -46,7 +49,7 @@ clean:
 	@/bin/rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
-	@echo "Archive deleted:$(OK_COLOR) OK!"
+	@echo "Archive deleted:$(OK_COLOR) OK!$(NO_COLOR)"
 	@/bin/rm -f $(NAME)
 
 
